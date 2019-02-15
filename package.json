@@ -1,0 +1,42 @@
+{
+  "name": "meal_booking",
+  "version": "1.0.0",
+  "description": "A meal booking app API",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js --exec babel-node --",
+    "lint": "npx eslint . --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyekunle-mark/dangling-needles.git"
+  },
+  "keywords": [
+    "meal",
+    "booking",
+    "express",
+    "node",
+    "mocha",
+    "api",
+    "fun"
+  ],
+  "author": "oyekunle oloyede",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oyekunle-mark/dangling-needles/issues"
+  },
+  "homepage": "https://github.com/oyekunle-mark/dangling-needles#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10"
+  }
+}
