@@ -3,7 +3,8 @@ import orders from './datastore/orders';
 
 class OrderController {
   static postOrder(req, res) {
-    const { meal } = req.body;
+    const newMeal = req.body.meal;
+    const meal = newMeal.replace(/[\s]+/g, ' ').trim();
 
     if (!menu.includes(meal)) {
       return res.status(400).json({
@@ -29,7 +30,8 @@ class OrderController {
 
   static putOrder(req, res) {
     const id = parseInt(req.params.id, 10);
-    const { meal } = req.body;
+    const newMeal = req.body.meal;
+    const meal = newMeal.replace(/[\s]+/g, ' ').trim();
 
     if (!menu.includes(meal)) {
       return res.status(400).json({
