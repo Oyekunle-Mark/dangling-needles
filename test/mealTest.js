@@ -49,7 +49,7 @@ describe('PUT /meals/', () => {
       .end((err, res) => {
         expect(res.body).to.be.a('object');
         expect(res.body.data[0]).to.have.property('meal');
-        expect(res.body.data[0].meal).to.equal('means');
+        expect(res.body.data[0].meal).to.equal('beans');
         done(err);
       });
   });
