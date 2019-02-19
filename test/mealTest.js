@@ -34,6 +34,40 @@ describe('POST /meals/', () => {
         done(err);
       });
   });
+
+  it('should create a second meal option', (done) => {
+    request(app)
+      .post('/api/v1/meals/')
+      .send({
+        meal: 'egg',
+      })
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(201)
+      .end((err, res) => {
+        expect(res.body).to.be.a('object');
+        expect(res.body.data[0]).to.have.property('meal');
+        expect(res.body.data[0].meal).to.equal('egg');
+        done(err);
+      });
+  });
+
+  it('should create a third meal option', (done) => {
+    request(app)
+      .post('/api/v1/meals/')
+      .send({
+        meal: 'plantain',
+      })
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(201)
+      .end((err, res) => {
+        expect(res.body).to.be.a('object');
+        expect(res.body.data[0]).to.have.property('meal');
+        expect(res.body.data[0].meal).to.equal('plantain');
+        done(err);
+      });
+  });
 });
 
 describe('PUT /meals/', () => {
