@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import OrderController from '../model/orderController';
-import OrderMiddleware from '../middlewares/orderController';
+import OrderMiddleware from '../middlewares/orderMiddleware';
 
 const orderRoute = Router();
 

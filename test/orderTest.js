@@ -24,6 +24,9 @@ describe('PUT /orders/1', () => {
   it('edit an already places order', (done) => {
     request(app)
       .put('/api/v1/orders/1')
+      .send({
+        meal: 'rice',
+      })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(400)

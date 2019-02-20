@@ -8,7 +8,7 @@ describe('POST /menu/', () => {
     request(app)
       .post('/api/v1/menu/')
       .send({
-        menu: "['egg', 'plaintain']"
+        menu: ['egg', 'plaintain']
       })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
