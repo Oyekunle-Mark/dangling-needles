@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/Oyekunle-Mark/dangling-needles.svg?branch=develop)](https://travis-ci.com/Oyekunle-Mark/dangling-needles)
 [![Coverage Status](https://coveralls.io/repos/github/Oyekunle-Mark/dangling-needles/badge.svg?branch=develop)](https://coveralls.io/github/Oyekunle-Mark/dangling-needles?branch=develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f9a5ef1eeecbf4ed483a/maintainability)](https://codeclimate.com/github/Oyekunle-Mark/dangling-needles/maintainability)
 
 # The Meal Booking API
 This a meal booking app built with node and express.
