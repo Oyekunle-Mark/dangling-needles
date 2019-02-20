@@ -7,6 +7,11 @@ This a meal booking app built with node and express.
 The API writes and reads from a javascript data structures.
 This set of APIs performs the much exalted CRUD operations in various guises.
 
+### API Documentation
+After cloning the repository to your computer, start the server and find the documentation at the root of the API.
+That is, ```**localhost:3000/api/v1/**```.
+Find the installation guide below.
+
 ### Installation Guide
 To get the full project use ```git clone https://github.com/oyekunle-mark/dangling-needles.git```
 Change to the project folder with ```cd dangling-needles```
