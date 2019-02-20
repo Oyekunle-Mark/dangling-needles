@@ -13,5 +13,5 @@ Ensure to check you conform to the style guide by typing the ```npm run lint``` 
 
 To run test use ```npm run test```
 
-##### ** Author **
+##### Author
 Oyekunle Oloyede
