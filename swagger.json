@@ -1,0 +1,381 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Meal Booking App",
+    "description": "This is the API of the meal booking app. It does not persist data",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/meals": {
+      "get": {
+        "description": "To get the full meal option",
+        "summary": "localhost:3000/api/v1/meals/",
+        "tags": [
+          "meal"
+        ],
+        "operationId": "MealsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "To create a meal option",
+        "summary": "localhost:3000/api/v1/meals/",
+        "tags": [
+          "meal"
+        ],
+        "operationId": "MealsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1meals~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/meals/1": {
+      "put": {
+        "description": "Update the information of a meal option ",
+        "summary": "localhost:3000/api/v1/meals/1",
+        "tags": [
+          "meal"
+        ],
+        "operationId": "Meals1Put",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1meals~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "Remove a meal option",
+        "summary": "localhost:3000/api/v1/meals/1",
+        "tags": [
+          "meal"
+        ],
+        "operationId": "Meals1Delete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1meals~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/menu": {
+      "post": {
+        "description": "Setup the menu for the day ",
+        "summary": "localhost:3000/api/v1/menu/",
+        "tags": [
+          "menu"
+        ],
+        "operationId": "MenuPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1menu~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "description": "Get the menu for the day",
+        "summary": "localhost:3000/api/v1/menu/",
+        "tags": [
+          "menu"
+        ],
+        "operationId": "MenuGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/orders": {
+      "post": {
+        "description": "Select the meal option from the menu ",
+        "summary": "localhost:3000/api/v1/orders",
+        "tags": [
+          "order"
+        ],
+        "operationId": "OrdersPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1meals~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "get": {
+        "description": "Get all the orders",
+        "summary": "localhost:3000/api/v1/orders",
+        "tags": [
+          "order"
+        ],
+        "operationId": "OrdersGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/orders/1": {
+      "put": {
+        "description": "Modify an order",
+        "summary": "localhost:3000/api/v1/orders/1",
+        "tags": [
+          "order"
+        ],
+        "operationId": "Orders1Put",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/localhost:3000~1api~1v1~1meals~1Request"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "localhost:3000/api/v1/meals/Request": {
+      "title": "localhost:3000/api/v1/meals/Request",
+      "example": {
+        "meal": "rice"
+      },
+      "type": "object",
+      "properties": {
+        "meal": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "meal"
+      ]
+    },
+    "localhost:3000/api/v1/menu/Request": {
+      "title": "localhost:3000/api/v1/menu/Request",
+      "example": {
+        "menu": [
+          "rice",
+          "beans"
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "menu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "menu"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "meal",
+      "description": "This collection of API allows users to create, edit and get meal options"
+    },
+    {
+      "name": "menu",
+      "description": "To create and get the menu"
+    },
+    {
+      "name": "order",
+      "description": "To make, edit and get orders"
+    }
+  ]
+}
