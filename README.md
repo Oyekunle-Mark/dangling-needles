@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Oyekunle-Mark/dangling-needles.svg?branch=develop)](https://travis-ci.com/Oyekunle-Mark/dangling-needles)
+
 # The Meal Booking API
 This a meal booking app built with node and express.
 The API writes and reads from a javascript data structures.
