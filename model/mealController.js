@@ -16,7 +16,17 @@ class MealController {
   }
 
   static postMeal(req, res) {
-    const { meal } = req.body;
+    const newMeal = req.body.meal;
+    const meal = newMeal.replace(/[\s]+/g, ' ').trim();
+
+    meals.forEach((element) => {
+      if (element.meal === meal) {
+        return res.status(400).json({
+          status: 400,
+          error: 'Meal already exists',
+        });
+      }
+    });
 
     meals.push({
       id: meals.length + 1,
@@ -41,7 +51,17 @@ class MealController {
     }
 
     const id = parseInt(req.params.id, 10);
-    const { meal } = req.body;
+    const newMeal = req.body.meal;
+    const meal = newMeal.replace(/[\s]+/g, ' ').trim();
+
+    meals.forEach((element) => {
+      if (element.meal === meal) {
+        return res.status(400).json({
+          status: 400,
+          error: 'Meal already exists',
+        });
+      }
+    });
 
     meals[id - 1] = {
       id,
@@ -66,6 +86,13 @@ class MealController {
     }
 
     const id = parseInt(req.params.id, 10);
+
+    if (meals.length < id) {
+      return res.status(400).json({
+        status: 400,
+        error: 'No meal matches the id',
+      });
+    }
 
     meals.splice(id - 1, 1);
 

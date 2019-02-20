@@ -3,7 +3,9 @@ import meals from './datastore/meals';
 
 class MenuController {
   static postMenu(req, res) {
-    const menuArray = req.body.menu;
+    const initialArray = req.body.menu;
+    const set = new Set(initialArray);
+    const menuArray = Array.from(set);
 
     let mealCheck = false;
 

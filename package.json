@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon index.js --exec babel-node --",
-    "lint": "npx eslint . --ext .js"
+    "lint": "npx eslint . --ext .js",
+    "test": "npx nyc --reporter=html --reporter=text npx mocha --exit --require babel-polyfill --require babel-register",
+    "coverage": "npx nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -34,9 +36,16 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-env": "^2.4.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "nodemon": "^1.18.10"
+    "mocha": "^6.0.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0",
+    "supertest": "^3.4.2"
   }
 }
