@@ -11,7 +11,7 @@ class MenuController {
 
     let mealCheck = false;
 
-    // meal must exist in the menu
+    // meal added to the menu must be existing meal option
     menuArray.forEach((val) => {
       mealCheck = false;
       meals.forEach((element) => {
