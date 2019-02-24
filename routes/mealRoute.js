@@ -3,10 +3,13 @@ import swaggerUi from 'swagger-ui-express';
 
 import MealController from '../model/mealController';
 import MealMiddleware from '../middlewares/mealMiddleware';
+
+// swagger document
 import swaggerDocument from '../swagger.json';
 
 const mealRoute = Router();
 
+// setup swagger
 mealRoute.use('/', swaggerUi.serve);
 mealRoute.get('/', swaggerUi.setup(swaggerDocument));
 

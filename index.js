@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
+// get the routes
 import mealRoute from './routes/mealRoute';
 import menuRoute from './routes/menuRoute';
 import orderRoute from './routes/orderRoute';

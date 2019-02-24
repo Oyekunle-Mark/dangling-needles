@@ -6,6 +6,7 @@ class OrderController {
     const newMeal = req.body.meal;
     const meal = newMeal.replace(/[\s]+/g, ' ').trim();
 
+    // check if meal exists in the menu
     if (!menu.includes(meal)) {
       return res.status(400).json({
         status: 400,

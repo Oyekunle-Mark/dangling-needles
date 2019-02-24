@@ -4,11 +4,14 @@ import meals from './datastore/meals';
 class MenuController {
   static postMenu(req, res) {
     const initialArray = req.body.menu;
+
+    // remove duplicates from the array
     const set = new Set(initialArray);
     const menuArray = Array.from(set);
 
     let mealCheck = false;
 
+    // meal must exist in the menu
     menuArray.forEach((val) => {
       mealCheck = false;
       meals.forEach((element) => {

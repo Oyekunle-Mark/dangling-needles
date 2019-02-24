@@ -2,6 +2,7 @@ import meals from './datastore/meals';
 
 class MealController {
   static getAllMeals(req, res) {
+    // if meal is empty
     if (meals.length === 0) {
       return res.status(400).json({
         status: 400,
@@ -19,6 +20,7 @@ class MealController {
     const newMeal = req.body.meal;
     const meal = newMeal.replace(/[\s]+/g, ' ').trim();
 
+    // check if meal exists
     meals.forEach((element) => {
       if (element.meal === meal) {
         return res.status(400).json({
@@ -54,6 +56,7 @@ class MealController {
     const newMeal = req.body.meal;
     const meal = newMeal.replace(/[\s]+/g, ' ').trim();
 
+    // check if meal exists
     meals.forEach((element) => {
       if (element.meal === meal) {
         return res.status(400).json({
